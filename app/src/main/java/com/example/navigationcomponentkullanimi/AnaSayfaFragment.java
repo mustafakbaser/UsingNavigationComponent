@@ -22,19 +22,16 @@ public class AnaSayfaFragment extends Fragment {
         binding = FragmentAnaSayfaBinding.inflate(inflater, container, false);
 
         binding.buttonDetay.setOnClickListener(view -> {
-//            binding.textViewAnasayfa.setText("Merhaba");
+            // binding.textViewAnasayfa.setText("Merhaba");
             Urunler urun = new Urunler(1, "TV");
 
-
             AnaSayfaFragmentDirections.DetayGecis gecis = AnaSayfaFragmentDirections.detayGecis(urun);
-            gecis.setAd("Ahmet");
-            gecis.setYas(23);
-            gecis.setBoy(1.74f);
+            gecis.setAd("Kürşad");
+            gecis.setYas(27);
+            gecis.setBoy(1.89f);
             gecis.setBekar(true);
 
-
-
-            /* Navigation classındaki geçişin sağlanmasını tetikleyen yapı burada  */
+            // Navigation classındaki geçişin sağlanmasını tetikleyen yapı burada
             Navigation.findNavController(view).navigate(gecis);
 
         });
